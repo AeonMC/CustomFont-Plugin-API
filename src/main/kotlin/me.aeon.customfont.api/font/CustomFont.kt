@@ -18,4 +18,5 @@ interface CustomFont : Font {
         fun characters(characterType: CharacterType, characters: String): AbstractBuilder
         fun build(): CustomFont
     }
+
 }
