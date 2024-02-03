@@ -7,9 +7,9 @@ import java.util.*
 
 abstract class PlayerDataManager {
 
+    abstract val fontManager: FontManager
     abstract val dataFile: YamlDocument
     abstract val playerData: MutableMap<UUID, CustomFont>
-    abstract val fontManager: FontManager
 
     /**
      * Loads data from disk

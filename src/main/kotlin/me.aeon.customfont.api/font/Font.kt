@@ -7,5 +7,6 @@ interface Font {
     val translationMap: Map<Char, String>
     fun setupTranslationMap(): Map<Char, String>
 
-    object DEFAULT : Font by DefaultFont.Implementation
+    object DEFAULT : Font by DefaultFont
+
 }

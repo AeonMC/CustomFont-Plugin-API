@@ -32,6 +32,6 @@ interface CacheManager {
      */
     fun clearCache()
 
-    companion object : CacheManager by CacheManagerImpl.Implementation
+    companion object : CacheManager by CacheManagerImpl
 
 }
