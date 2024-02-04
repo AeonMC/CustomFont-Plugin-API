@@ -1,6 +1,7 @@
 package me.aeon.customfont.api.event
 
 import me.aeon.customfont.api.font.CustomFont
+import me.aeon.customfont.api.font.Font
 import org.bukkit.OfflinePlayer
 import org.bukkit.command.CommandSender
 import org.bukkit.event.Cancellable
@@ -18,7 +19,7 @@ import org.bukkit.event.HandlerList
 class CustomFontSetEvent(
     val sender: CommandSender,
     val player: OfflinePlayer,
-    val oldFont: CustomFont?,
+    val oldFont: Font,
     var newFont: CustomFont
 ) : Event(), Cancellable {
 
