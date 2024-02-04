@@ -20,4 +20,7 @@ abstract class ConfigParser {
 
     abstract fun ignoredKeywords(): List<String>
 
+    abstract fun isPerGroupFontsEnabled(): Boolean
+    abstract fun perGroupFonts(): Map<String, String>
+
 }
