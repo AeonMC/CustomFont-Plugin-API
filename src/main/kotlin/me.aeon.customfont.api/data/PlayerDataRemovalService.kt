@@ -2,9 +2,7 @@ package me.aeon.customfont.api.data
 
 import me.aeon.customfont.api.data.PlayerDataRemovalService.Result.*
 
-abstract class PlayerDataRemovalService(
-    private val playerDataManager: PlayerDataManager
-){
+abstract class PlayerDataRemovalService {
 
     abstract val confirmationTimers: MutableMap<RemoveType, Long>
 
