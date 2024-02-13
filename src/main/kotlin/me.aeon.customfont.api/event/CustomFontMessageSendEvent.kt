@@ -3,8 +3,8 @@ package me.aeon.customfont.api.event
 import me.aeon.customfont.api.font.CustomFont
 import org.bukkit.entity.Player
 import org.bukkit.event.Cancellable
+import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
-import org.bukkit.event.player.PlayerEvent
 
 /**
  * Event that is fired whenever a message with an active custom font is being sent
@@ -16,11 +16,11 @@ import org.bukkit.event.player.PlayerEvent
  * @param font The font being used
  */
 class CustomFontMessageSendEvent(
-    player: Player,
+    val player: Player?,
     val oldMessage: String,
     var newMessage: String,
     val font: CustomFont,
-) : PlayerEvent(player), Cancellable {
+) : Event(), Cancellable {
 
     private var isCancelled: Boolean = false
 
