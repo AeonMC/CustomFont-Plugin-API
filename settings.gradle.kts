@@ -1,3 +1,1 @@
-
-rootProject.name = "CustomFont-Plugin-API"
-
+rootProject.name = "customfont-plugin-api"

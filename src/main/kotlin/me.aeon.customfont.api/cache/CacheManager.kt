@@ -2,7 +2,6 @@ package me.aeon.customfont.api.cache
 
 import me.aeon.customfont.expansion.cache.CacheManagerImpl
 
-
 interface CacheManager {
 
     /**
@@ -11,6 +10,7 @@ interface CacheManager {
      * NOTE: Placeholders should not be cached
      */
     fun isCacheable(text: String): Boolean
+
 
     /**
      * Whether the [incompleteCache] is cached
