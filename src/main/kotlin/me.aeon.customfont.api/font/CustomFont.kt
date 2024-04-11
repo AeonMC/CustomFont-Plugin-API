@@ -3,7 +3,6 @@ package me.aeon.customfont.api.font
 import me.aeon.customfont.plugin.font.CustomFontImpl
 
 interface CustomFont : Font {
-    val id: String
     val permission: String?
 
     class Builder : AbstractBuilder by CustomFontImpl.Builder()
