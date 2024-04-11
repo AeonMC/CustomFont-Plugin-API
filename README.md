@@ -1,4 +1,4 @@
-Description
+**Description**<br>
 This API provides you various functionalities from the plugin <a href=https://aeonxd.gitbook.io/docs/plugins/customfont>CustomFont</a>
 
 **Features**
