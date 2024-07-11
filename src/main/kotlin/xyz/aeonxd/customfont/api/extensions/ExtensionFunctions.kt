@@ -1,6 +1,6 @@
-package me.aeon.customfont.api.extensions
+package xyz.aeonxd.customfont.api.extensions
 
-import me.aeon.customfont.api.font.CustomFont
+import xyz.aeonxd.customfont.api.font.CustomFont
 import me.clip.placeholderapi.PlaceholderAPI
 import org.bukkit.OfflinePlayer
 import org.bukkit.command.CommandSender

@@ -1,6 +1,7 @@
-package me.aeon.customfont.api.event
+package xyz.aeonxd.customfont.api.event
 
-import me.aeon.customfont.api.font.CustomFont
+import xyz.aeonxd.customfont.api.font.CustomFont
+import xyz.aeonxd.customfont.api.font.Font
 import org.bukkit.OfflinePlayer
 import org.bukkit.command.CommandSender
 import org.bukkit.event.Cancellable
@@ -8,19 +9,18 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * Event that is fired whenever a custom font is being unset
+ * Event that is fired whenever a custom font is being set
  *
- * This event should only fired whenever a player with an active
- * custom font leaves the server
- *
- * @param sender Who unset the font
- * @param player Who the font is being unset for
- * @param font The font being unset
+ * @param sender Who set the font
+ * @param player Who the font is being set for
+ * @param oldFont The old font
+ * @param newFont The font being set
  */
-class CustomFontUnsetEvent(
+class CustomFontSetEvent(
     val sender: CommandSender,
     val player: OfflinePlayer,
-    var font: CustomFont
+    val oldFont: Font,
+    var newFont: CustomFont
 ) : Event(), Cancellable {
 
     private var isCancelled: Boolean = false

@@ -1,7 +1,6 @@
-package me.aeon.customfont.api.event
+package xyz.aeonxd.customfont.api.event
 
-import me.aeon.customfont.api.font.CustomFont
-import me.aeon.customfont.api.font.Font
+import xyz.aeonxd.customfont.api.font.CustomFont
 import org.bukkit.OfflinePlayer
 import org.bukkit.command.CommandSender
 import org.bukkit.event.Cancellable
@@ -9,18 +8,16 @@ import org.bukkit.event.Event
 import org.bukkit.event.HandlerList
 
 /**
- * Event that is fired whenever a custom font is being set
+ * Event that is fired whenever a custom font is being reset
  *
- * @param sender Who set the font
- * @param player Who the font is being set for
- * @param oldFont The old font
- * @param newFont The font being set
+ * @param sender Who reset the font
+ * @param player Who the font is being reset for
+ * @param font The old font
  */
-class CustomFontSetEvent(
+class CustomFontResetEvent(
     val sender: CommandSender,
     val player: OfflinePlayer,
-    val oldFont: Font,
-    var newFont: CustomFont
+    val font: CustomFont,
 ) : Event(), Cancellable {
 
     private var isCancelled: Boolean = false

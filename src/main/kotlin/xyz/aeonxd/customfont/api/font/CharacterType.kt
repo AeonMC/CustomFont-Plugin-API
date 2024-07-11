@@ -1,4 +1,4 @@
-package me.aeon.customfont.api.font
+package xyz.aeonxd.customfont.api.font
 
 import dev.dejvokep.boostedyaml.block.implementation.Section
 

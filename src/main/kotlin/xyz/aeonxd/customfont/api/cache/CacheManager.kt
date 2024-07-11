@@ -1,6 +1,6 @@
-package me.aeon.customfont.api.cache
+package xyz.aeonxd.customfont.api.cache
 
-import me.aeon.customfont.expansion.cache.CacheManagerImpl
+import xyz.aeonxd.customfont.expansion.cache.CacheManagerImpl
 
 interface CacheManager {
 

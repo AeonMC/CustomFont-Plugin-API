@@ -1,8 +1,8 @@
-package me.aeon.customfont.api.font
+package xyz.aeonxd.customfont.api.font
 
-import me.aeon.customfont.plugin.font.TextTranslatorImpl
-import me.aeon.customfont.api.cache.CacheManager
 import org.bukkit.OfflinePlayer
+import xyz.aeonxd.customfont.api.cache.CacheManager
+import xyz.aeonxd.customfont.plugin.font.TextTranslatorImpl
 
 interface TextTranslator {
 

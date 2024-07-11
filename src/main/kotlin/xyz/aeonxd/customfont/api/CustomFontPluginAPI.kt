@@ -1,20 +1,20 @@
-package me.aeon.customfont.api
-
-import me.aeon.commonslib.commands.MessageParserProvider
-import me.aeon.commonslib.commands.MessageSenderProvider
-import me.aeon.commonslib.message.MessageParser
-import me.aeon.commonslib.message.MessageSender
-import me.aeon.customfont.api.config.ConfigParser
-import me.aeon.customfont.api.data.PlayerDataManager
-import me.aeon.customfont.api.data.PlayerDataRemovalService
-import me.aeon.customfont.api.font.FontManager
+package xyz.aeonxd.customfont.api
 
 import org.bukkit.Bukkit
 import org.bukkit.command.CommandExecutor
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
+import xyz.aeonxd.commonslib.commands.MessageParserProvider
+import xyz.aeonxd.commonslib.commands.MessageSenderProvider
+import xyz.aeonxd.commonslib.message.MessageParser
+import xyz.aeonxd.commonslib.message.MessageSender
+import xyz.aeonxd.commonslib.scheduler.TaskScheduler
+import xyz.aeonxd.customfont.api.config.ConfigParser
+import xyz.aeonxd.customfont.api.data.PlayerDataManager
+import xyz.aeonxd.customfont.api.data.PlayerDataRemovalService
+import xyz.aeonxd.customfont.api.font.FontManager
 
-abstract class CustomFontPluginAPI : JavaPlugin(), MessageSenderProvider, MessageParserProvider {
+abstract class CustomFontPluginAPI : JavaPlugin(), TaskScheduler, MessageSenderProvider, MessageParserProvider {
 
     abstract var configParser: ConfigParser
         protected set
@@ -38,17 +38,16 @@ abstract class CustomFontPluginAPI : JavaPlugin(), MessageSenderProvider, Messag
     abstract fun unregisterListener(listener: Listener)
     abstract fun unregisterListeners()
 
-    abstract fun runTask(task: () -> Unit)
-    abstract fun runTaskLater(delay: Long, task: () -> Unit)
 
     companion object {
         @JvmStatic
-        lateinit var INSTANCE: CustomFontPluginAPI
+        lateinit var instance: CustomFontPluginAPI
 
         @JvmStatic
         val pluginManager = Bukkit.getPluginManager()
 
         @JvmStatic
-        fun isPluginEnabled(name: String) = pluginManager.isPluginEnabled(name)
+        fun isPluginEnabled(name: String) = Bukkit.getPluginManager().isPluginEnabled(name)
     }
+
 }

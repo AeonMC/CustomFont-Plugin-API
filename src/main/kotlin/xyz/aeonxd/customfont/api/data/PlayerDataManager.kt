@@ -1,8 +1,8 @@
-package me.aeon.customfont.api.data
+package xyz.aeonxd.customfont.api.data
 
 import dev.dejvokep.boostedyaml.YamlDocument
-import me.aeon.customfont.api.font.CustomFont
-import me.aeon.customfont.api.font.FontManager
+import xyz.aeonxd.customfont.api.font.CustomFont
+import xyz.aeonxd.customfont.api.font.FontManager
 import java.util.*
 
 abstract class PlayerDataManager {

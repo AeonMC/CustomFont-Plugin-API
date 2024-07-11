@@ -1,6 +1,6 @@
-package me.aeon.customfont.api.font
+package xyz.aeonxd.customfont.api.font
 
-import me.aeon.customfont.plugin.font.DefaultFont
+import xyz.aeonxd.customfont.plugin.font.DefaultFont
 
 interface Font {
     val id: String

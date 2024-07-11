@@ -1,6 +1,6 @@
-package me.aeon.customfont.api.data
+package xyz.aeonxd.customfont.api.data
 
-import me.aeon.customfont.api.data.PlayerDataRemovalService.Result.*
+import xyz.aeonxd.customfont.api.data.PlayerDataRemovalService.Result.*
 
 abstract class PlayerDataRemovalService {
 
@@ -30,13 +30,9 @@ abstract class PlayerDataRemovalService {
         ONLINE("*"), OFFLINE("**"), ALL("***");
 
         companion object {
-            fun fromString(input: String) =
-                when (input) {
-                    ONLINE.char -> ONLINE
-                    OFFLINE.char -> OFFLINE
-                    ALL.char -> ALL
-                    else -> ONLINE
-                }
+            private val identifiers = entries.associateBy { it.char }
+
+            fun fromString(input: String) = identifiers[input]
         }
     }
 

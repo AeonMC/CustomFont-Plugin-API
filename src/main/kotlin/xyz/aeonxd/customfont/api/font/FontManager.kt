@@ -1,4 +1,4 @@
-package me.aeon.customfont.api.font
+package xyz.aeonxd.customfont.api.font
 
 abstract class FontManager {
 

@@ -1,6 +1,6 @@
-package me.aeon.customfont.api.event
+package xyz.aeonxd.customfont.api.event
 
-import me.aeon.customfont.api.font.CustomFont
+import xyz.aeonxd.customfont.api.font.CustomFont
 import org.bukkit.entity.Player
 import org.bukkit.event.Cancellable
 import org.bukkit.event.Event
