@@ -4,10 +4,10 @@ import org.bukkit.Bukkit
 import org.bukkit.command.CommandExecutor
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
-import xyz.aeonxd.commonslib.commands.MessageParserProvider
-import xyz.aeonxd.commonslib.commands.MessageSenderProvider
 import xyz.aeonxd.commonslib.message.MessageParser
+import xyz.aeonxd.commonslib.message.MessageParserProvider
 import xyz.aeonxd.commonslib.message.MessageSender
+import xyz.aeonxd.commonslib.message.MessageSenderProvider
 import xyz.aeonxd.commonslib.scheduler.TaskScheduler
 import xyz.aeonxd.customfont.api.config.ConfigParser
 import xyz.aeonxd.customfont.api.data.PlayerDataManager
