@@ -2,6 +2,7 @@ package xyz.aeonxd.customfont.api.font
 
 import xyz.aeonxd.customfont.plugin.font.DefaultFont
 
+@Suppress("UNUSED")
 abstract class Font {
 
     abstract val id: String

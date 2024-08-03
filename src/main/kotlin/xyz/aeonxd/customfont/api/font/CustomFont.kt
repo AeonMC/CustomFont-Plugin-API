@@ -2,6 +2,7 @@ package xyz.aeonxd.customfont.api.font
 
 import xyz.aeonxd.customfont.plugin.font.CustomFontImpl
 
+@Suppress("UNUSED")
 abstract class CustomFont : Font() {
     abstract val permission: String?
 

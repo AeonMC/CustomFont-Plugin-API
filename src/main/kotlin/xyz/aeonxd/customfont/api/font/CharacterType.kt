@@ -8,6 +8,7 @@ import dev.dejvokep.boostedyaml.block.implementation.Section
  * @param route Path to access the replacement in a characters section
  * @param default Default characters
  */
+@Suppress("UNUSED")
 enum class CharacterType(val route: String, val default: String) {
 
     UPPERCASE("uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),

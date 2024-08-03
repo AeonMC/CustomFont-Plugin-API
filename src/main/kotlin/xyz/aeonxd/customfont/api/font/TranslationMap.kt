@@ -1,5 +1,6 @@
 package xyz.aeonxd.customfont.api.font
 
+@Suppress("UNUSED")
 abstract class TranslationMap {
 
     abstract val extensiveMap: Map<CharacterType, Pair<String, String>>
