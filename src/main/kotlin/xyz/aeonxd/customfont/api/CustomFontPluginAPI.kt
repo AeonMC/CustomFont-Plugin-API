@@ -11,7 +11,7 @@ import xyz.aeonxd.commonslib.message.MessageSenderProvider
 import xyz.aeonxd.commonslib.scheduler.TaskScheduler
 import xyz.aeonxd.customfont.api.config.ConfigParser
 import xyz.aeonxd.customfont.api.data.PlayerDataManager
-import xyz.aeonxd.customfont.api.data.PlayerDataRemovalService
+import xyz.aeonxd.customfont.api.data.bulkhandler.PlayerBulkDataManagers
 import xyz.aeonxd.customfont.api.font.FontManager
 
 abstract class CustomFontPluginAPI : JavaPlugin(), TaskScheduler, MessageSenderProvider, MessageParserProvider {
@@ -28,7 +28,7 @@ abstract class CustomFontPluginAPI : JavaPlugin(), TaskScheduler, MessageSenderP
 
     abstract var playerDataManager: PlayerDataManager
         protected set
-    abstract var playerDataRemovalService: PlayerDataRemovalService
+    abstract var playerBulkDataManagers: PlayerBulkDataManagers
         protected set
 
     abstract fun reload()
@@ -47,7 +47,7 @@ abstract class CustomFontPluginAPI : JavaPlugin(), TaskScheduler, MessageSenderP
         val pluginManager = Bukkit.getPluginManager()
 
         @JvmStatic
-        fun isPluginEnabled(name: String) = Bukkit.getPluginManager().isPluginEnabled(name)
+        fun isPluginEnabled(name: String) = pluginManager.isPluginEnabled(name)
     }
 
 }

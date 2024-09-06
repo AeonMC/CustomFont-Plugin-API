@@ -30,7 +30,7 @@ abstract class PlayerDataManager {
      * Used when setting a new custom chat font or
      * when a player with a previous font set is joining the server
      */
-    abstract operator fun set(uuid: UUID, font: CustomFont)
+    abstract fun set(uuid: UUID, font: CustomFont, saveFile: Boolean = true)
 
     /**
      * Removes from [online player data][playerData] map
